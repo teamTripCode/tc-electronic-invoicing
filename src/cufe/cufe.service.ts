@@ -10,9 +10,9 @@ export class CufeService {
   constructor(private configService: ConfigService) { }
 
   /**
- * Genera CUFE (Código Único de Facturación Electrónica)
- * según algoritmo DIAN
- */
+   * Genera CUFE (Código Único de Facturación Electrónica)
+   * según algoritmo DIAN
+   */
   generateCufe(invoiceData: any): string {
     // Construir cadena según especificaciones DIAN
     const softwareId = this.configService.get<string>('dian.softwareId');
